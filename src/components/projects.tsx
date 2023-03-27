@@ -1,3 +1,5 @@
+import capa from '../assets/Capa.jpeg';
+
 export function Projects() {
 
   return (
@@ -12,7 +14,7 @@ export function Projects() {
           <a href="https://devlinks-one.vercel.app" target="_blank">
             <img
               className="max-w-4xl rounded-md"
-              src="../src/assets/capa.jpeg"
+              src={capa}
               alt="Projeto devlinks"/>
           </a>
         </div>
