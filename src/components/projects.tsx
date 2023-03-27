@@ -12,7 +12,7 @@ export function Projects() {
           <a href="https://devlinks-one.vercel.app" target="_blank">
             <img
               className="max-w-4xl rounded-md"
-              src="../src/assets/capa.png"
+              src="../src/assets/capa.jpeg"
               alt="Projeto devlinks"/>
           </a>
         </div>

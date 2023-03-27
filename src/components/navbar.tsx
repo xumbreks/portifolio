@@ -1,4 +1,3 @@
-import { List } from "@phosphor-icons/react";
 import { useState } from "react";
 
 export function Navbar() {

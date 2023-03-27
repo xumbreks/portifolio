@@ -4,7 +4,7 @@ export function Home () {
       <div className="p-6 flex items-center">
         <img
           className="max-h-96 rounded-full"
-          src="../src/assets/eu.png" 
+          src="../src/assets/eu.jpeg" 
           alt="foto do brian sorrindo" />
       </div>
       <div className="flex flex-col justify-center md:text-left">
