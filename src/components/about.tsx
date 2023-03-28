@@ -6,7 +6,7 @@ export function About() {
           Sobre Mim
         </p>
       </section>
-      <div className="flex h-auto justify-evenly pt-10">
+      <div className="flex h-screen justify-evenly pt-10">
         <div className="text-lg sm:text-3xl">
           <p className="text-3xl sm:text-6xl">Hard Skills</p>
           <ul className="p-6">

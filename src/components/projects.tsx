@@ -9,7 +9,7 @@ export function Projects() {
           Projetos
         </p>
       </section>
-      <div className="flex flex-col items-center pt-20 gap-10">
+      <div className="flex flex-col items-center pt-20 gap-10 h-screen">
         <div className="hover:scale-105 transform transition-all duration-200 ease-in hover:opacity-90">
           <a href="https://devlinks-one.vercel.app" target="_blank">
             <img
