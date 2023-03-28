@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 export function Navbar() {
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   function toggleMode() {
     const html = document.documentElement
@@ -12,30 +8,30 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="flex h-16 w-full justify-center items-center fixed">
-        <div className="w-full flex justify-center items-center gap-10">
-          <div className="text-xl sm:text-2xl font-bold px-2 hover:border-2 border-white rounded-full 
+      <nav className="flex flex-col h-auto sm:h-16 w-full justify-center items-center fixed">
+        <div className="w-auto sm:flex justify-center items-center gap-10">
+          <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 px-4 sm:px-2 hover:border-2 border-white rounded-full 
         transition-colors
       dark:hover:border-black">
             <a href="#inicio">
               Inicio
             </a>
           </div>
-          <div className="text-xl sm:text-2xl font-bold px-2 hover:border-2 border-white rounded-full
+          <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 px-4 sm:px-2 hover:border-2 border-white rounded-full
         transition-colors
       dark:hover:border-black">
             <a href="#sobre">
               Sobre
             </a>
           </div>
-          <div className="text-xl sm:text-2xl font-bold px-2 hover:border-2 border-white rounded-full
+          <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 px-4 sm:px-2 hover:border-2 border-white rounded-full
         transition-colors
       dark:hover:border-black">
             <a href="#projetos">
               Projetos
             </a>
           </div>
-          <div className="text-xl sm:text-2xl font-bold px-2 hover:border-2 border-white rounded-full
+          <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 px-4 sm:px-2 hover:border-2 border-white rounded-full
         transition-colors
       dark:hover:border-black">
             <a href='#contato'>

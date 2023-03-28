@@ -3,10 +3,10 @@ import eu from '../assets/eu.jpeg'
 export function Home () {
 
   return (
-    <div id="inicio" className="flex justify-evenly items-center h-screen pt-20 md:flex-row">
-      <div className="p-6 flex items-center">
+    <div id="inicio" className="flex sm:justify-evenly items-center h-screen pt-2">
+      <div className="px-6 sm:p-6 flex items-center">
         <img
-          className="max-h-96 rounded-full"
+          className="h-72 sm:max-h-96 rounded-full"
           src={eu}
           alt="foto do brian sorrindo" />
       </div>

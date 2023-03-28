@@ -4,8 +4,8 @@ export function Projects() {
 
   return (
     <>
-      <section id="projetos" className="flex justify-center pt-20">
-        <p className="text-8xl">
+      <section id="projetos" className="flex justify-center pt-40 sm:pt-20">
+        <p className="text-5xl sm:text-8xl">
           Projetos
         </p>
       </section>
@@ -13,7 +13,7 @@ export function Projects() {
         <div className="hover:scale-105 transform transition-all duration-200 ease-in hover:opacity-90">
           <a href="https://devlinks-one.vercel.app" target="_blank">
             <img
-              className="max-w-4xl rounded-md"
+              className="max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl rounded-md"
               src={capa}
               alt="Projeto devlinks"/>
           </a>

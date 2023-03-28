@@ -3,8 +3,8 @@ import { FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor
 export function Contact() {
 
   return (
-    <div id="contato" className="pb-6 mt-10  flex flex-col items-center justify-center gap-10 pt-20 h-screen">
-      <p className="text-8xl">
+    <div id="contato" className="pb-6 mt-10 flex flex-col items-center justify-center gap-10 pt-20 h-screen">
+      <p className="text-5xl sm:text-8xl">
         Contato
       </p>
       <div className="flex gap-5">
