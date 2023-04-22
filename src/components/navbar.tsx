@@ -8,7 +8,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="flex h-auto sm:h-16 w-full justify-center items-center fixed">
+      <nav className="flex h-auto sm:h-16 w-full justify-center items-center fixed bg-gray-800 dark:bg-gray-200">
         <div className="w-auto mt-2 sm:flex">
           <div className="flex justify-center items-center gap-2 sm:gap-10">
             <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 sm:px-2 hover:sm:border-2 border-white 
