@@ -2,7 +2,7 @@ import html from '../assets/html-icon.png';
 import javascript from '../assets/javascript-icon.jpeg';
 import react from '../assets/react-icon.png';
 import tailwind from '../assets/tailwind-icon.png';
-import typescript from '../assets/Typescript-icon.jpeg';
+import typescript from '../assets/typescript-icon.jpeg';
 
 export function About() {
   return (
