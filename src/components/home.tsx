@@ -1,10 +1,13 @@
 import eu from '../assets/eu.jpeg'
 
-export function Home () {
+export function Home() {
 
   return (
-    <div id="inicio" className="flex sm:justify-evenly items-center h-screen pt-2">
-      <div className="px-6 sm:p-6 flex items-center">
+    <div
+      id="inicio"
+      className="flex flex-col justify-center items-center h-screen pt-2 space-y-6
+      sm:flex-row sm:justify-evenly">
+      <div className="px-6 sm:p-6">
         <img
           className="h-72 sm:max-h-96 rounded-full"
           src={eu}

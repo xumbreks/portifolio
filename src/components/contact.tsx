@@ -1,10 +1,10 @@
-import { FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react"
+import { GithubLogo, InstagramLogo, LinkedinLogo, WhatsappLogo } from "@phosphor-icons/react"
 
 export function Contact() {
 
   return (
     <div id="contato" className="pb-6 mt-10 flex flex-col items-center justify-center gap-10 pt-20 h-screen">
-      <p className="text-5xl sm:text-8xl">
+      <p className="text-5xl font-bold sm:text-8xl">
         Contato
       </p>
       <div className="flex gap-5">
@@ -30,11 +30,11 @@ export function Contact() {
           <GithubLogo size={60} />
         </a>
         <a
-          className="bg-[#3b5998] rounded-full hover:scale-105 transform transition-all duration-150 ease-in
+          className="bg-[#25D366] rounded-full hover:scale-105 transform transition-all duration-150 ease-in
           dark:text-white p-2"
-          href="https://facebook.com/brianrangel.cardososantos"
+          href="https://wa.me/351910025357?text=Olá%20gostaria%20de%20saber%20sobre%20seus%20serviços."
           target="_blank">
-          <FacebookLogo size={60}/>
+          <WhatsappLogo size={60}/>
         </a>
       </div>
     </div>

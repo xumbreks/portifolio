@@ -8,5 +8,5 @@ html {
 
 body {
   @apply bg-gradient-to-b from-black to-gray-800 text-white font-roboto bg-no-repeat bg-center bg-cover bg-fixed
-  dark:bg-gradient-to-b dark:from-white dark:to-gray-300 dark:text-black
+  dark:bg-gradient-to-b dark:from-white dark:to-gray-300 dark:text-black antialiased
 }

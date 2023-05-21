@@ -47,12 +47,10 @@ export function Navbar() {
               <button
                 className="w-8 h-8 bg-white bg-[url(../src/assets/moon.svg)] bg-no-repeat bg-center rounded-[50%] 
                            absolute z-[1] top-1/2 transition-all transform -translate-y-1/2
-                           dark:bg-[url(../src/assets/sun.svg)] dark:transition dark:transform dark:translate-x-full">
-              </button>
+                           dark:bg-[url(../src/assets/sun.svg)] dark:transition dark:transform dark:translate-x-full"/>
               <span className="block w-16 h-6 bg-white bg-opacity-20 border-2 border-white backdrop-blur-sm 
                               rounded-full
-                             dark:bg-black dark:bg-opacity-10 dark:border-black">
-              </span>
+                             dark:bg-black dark:bg-opacity-10 dark:border-black"/>
             </div>
           </div>
         </div>
