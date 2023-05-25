@@ -1,4 +1,4 @@
-import eu from '../assets/eu.jpeg'
+import eu from '../assets/eu2.png'
 
 export function Home() {
 
