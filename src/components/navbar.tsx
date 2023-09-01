@@ -1,9 +1,18 @@
 export function Navbar() {
 
   function toggleMode() {
-    const html = document.documentElement
+    const html = document.documentElement;
+    html.classList.toggle("dark")
+    const img = document.querySelector("#profile img")
 
-    html.classList.toggle('dark')
+    // substituir a imagem
+    if (html.classList.contains('dark')) {
+      // se tiver light mode, adicionar a imagem light
+      img?.setAttribute("src", "./src/assets/eu9.png")
+    } else {
+      // set tiver sem light mode, manter a imagem normal
+      img?.setAttribute("src", "./src/assets/eu8.png")
+    }
   }
 
   return (
