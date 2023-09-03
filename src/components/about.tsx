@@ -3,6 +3,7 @@ import javascript from '../assets/javascript-icon.jpeg';
 import react from '../assets/react-icon.png';
 import tailwind from '../assets/tailwind-icon.png';
 import typescript from '../assets/typescript-icon.jpeg';
+import java from '../assets/java.png';
 
 export function About() {
   return (
@@ -62,6 +63,13 @@ export function About() {
             src={typescript}
             alt="" />
             TypeScript
+        </a>
+        <a className='flex flex-col items-center font-semibold gap-2 sm:text-3xl'>
+          <img
+            className='w-10 h-10 rounded-lg sm:w-20 sm:h-20'
+            src={java}
+            alt="" />
+            Java
         </a>
       </div>
     </div>
