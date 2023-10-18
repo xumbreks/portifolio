@@ -1,58 +1,44 @@
-export function Navbar() {
+import { GithubLogo } from "@phosphor-icons/react";
 
-  function toggleMode() {
-    const html = document.documentElement;
-    html.classList.toggle("dark")
-  }
+export function Navbar() {
 
   return (
     <>
-      <nav className="flex h-auto sm:h-16 w-full justify-center items-center fixed bg-gray-800 dark:bg-gray-200">
-        <div className="w-auto mt-2 sm:flex">
-          <div className="flex justify-center items-center gap-2 sm:gap-10">
-            <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 sm:px-2 hover:sm:border-2 border-white 
-                            rounded-full 
-                            transition-colors
-                          dark:hover:border-black">
-              <a href="#inicio">
-                Inicio
-              </a>
-            </div>
-            <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 sm:px-2 hover:sm:border-2 border-white 
-                            rounded-full
-                            transition-colors
-                          dark:hover:border-black">
-              <a href="#sobre">
-                Sobre
-              </a>
-            </div>
-            <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 sm:px-2 hover:sm:border-2 border-white 
-                            rounded-full
-                            transition-colors
-                          dark:hover:border-black">
-              <a href="#projetos">
-                Projetos
-              </a>
-            </div>
-            <div className="text-lg sm:text-2xl font-bold my-1 sm:my-0 sm:px-2 hover:sm:border-2 border-white 
-                            rounded-full
-                            transition-colors
-                          dark:hover:border-black">
-              <a href='#contato'>
-                Contato
-              </a>
-            </div>
-            <div className="relative w-16" onClick={toggleMode}>
-              <button
-                className="w-8 h-8 bg-white bg-[url(../src/assets/moon.svg)] bg-no-repeat bg-center rounded-[50%] 
-                           absolute z-[1] top-1/2 transition-all transform -translate-y-1/2
-                           dark:bg-[url(../src/assets/sun.svg)] dark:transition dark:transform dark:translate-x-full"/>
-              <span className="block w-16 h-6 bg-white bg-opacity-20 border-2 border-white backdrop-blur-sm 
-                              rounded-full
-                             dark:bg-black dark:bg-opacity-10 dark:border-black"/>
-            </div>
-          </div>
+      <nav className="flex h-[3.75rem] w-full items-center justify-center fixed bg-color-800 
+      border-b border-b-color-600 z-50 md:justify-around">
+        <div className="hidden md:block">
+          <a 
+            href="#home" 
+            className="font-medium font-robotoSlab hover:border-t border-t-color-600
+            md:text-xl lg:text-2xl">
+            &lt;Brian Rangel/&gt;
+          </a>
         </div>
+        <div className="flex space-x-[1.875rem] font-medium text-base lg:text-xl">
+          <a 
+            className="hover:border-t border-t-color-600" 
+            href="#about">Sobre</a>
+            <a 
+            className="hover:border-t border-t-color-600"
+            href="#techs">Tecnologias</a>
+          <a 
+            className="hover:border-t border-t-color-600"
+            href="#projects">Projetos</a>
+          <a 
+            className="hover:border-t border-t-color-600"
+            href="#contact">Contato</a>
+        </div>
+        <a href="https://www.github.com/xumbreks" target="_blank">
+          <div className="hidden items-center space-x-1 md:flex">
+            <div className="border bg-color-900 border-color-500 rounded-full w-7 h-7 flex items-center justify-center">
+              <GithubLogo size={20} />
+            </div>
+            <p className="text-color-500/70 font-medium text-lg underline underline-offset-2
+            hover:text-color-500 transition-colors">
+              brianrangel
+            </p>
+          </div>
+        </a>
       </nav>
     </>
   )

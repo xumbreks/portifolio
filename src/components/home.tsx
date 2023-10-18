@@ -1,22 +1,26 @@
-import euDark from '../assets/eu9.png';
+import brian from '../assets/brian.png';
 
 export function Home() {
 
   return (
-
     <div
-      id="inicio"
-      className="flex flex-col justify-center items-center h-screen pt-2 space-y-6
-      sm:flex-row sm:justify-evenly">
-      <div id="profile" className="px-6 sm:p-6">
-        <img
-          className="h-72 sm:max-h-96 rounded-full"
-          src={euDark}
-          alt="foto do brian sorrindo" />
+      id='home'
+      className='w-full h-screen flex flex-col-reverse items-center justify-center 
+      border-b border-b-color-600 md:flex-row md:space-x-10 md:px-10'>
+      <div className='mt-10 md:mt-0'>
+        <p className='font-medium text-lg px-5 md:px-0 md:text-[1.5rem] lg:text-[2rem]'>
+          Olá 👋🏻 ,<br />
+          eu sou o Brian Rangel,<br />
+          um Desenvolvedor <span className='text-color-600'>WEB</span>, apaixonado por
+          <span className='text-color-600'> Tecnologia.</span>
+        </p>
       </div>
-      <div className="flex flex-col justify-center md:text-left">
-        <span className="text-5xl md:text-8xl">Brian Rangel</span>
-        <span className="text-3xl md:text-5xl">Desenvolvedor WEB</span>
+      <div className='w-56 h-auto border-2 border-color-600 rounded-full md:w-[18.75rem] md:h-auto
+      '>
+        <img
+          src={brian}
+          alt="foto brian sorrindo"
+        />
       </div>
     </div>
   )

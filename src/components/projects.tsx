@@ -1,36 +1,33 @@
-import capa from '../assets/Capa.jpeg';
+import devlinks from '../assets/devlinks.jpeg';
 
 export function Projects() {
 
   return (
-    <>
-      <section id="projetos" className="flex justify-center pt-40 sm:pt-20">
-        <p className="text-5xl font-bold sm:text-8xl">
-          Projetos
-        </p>
-      </section>
-      <div className="flex flex-col items-center pt-20 gap-10 h-screen">
-        <div className="">
-          <h2 className='flex flex-wrap sm:flex gap-2 font-bold px-1 justify-center'>TECHS -
-            <span className='bg-gray-600 rounded-full px-2 dark:bg-gray-300'>HTML</span>
-            <span className='bg-gray-600 rounded-full px-2 dark:bg-gray-300'>TaiwindCSS</span>
-            <span className='bg-gray-600 rounded-full px-2 dark:bg-gray-300'>JavaScript</span>
-            <span className='bg-gray-600 rounded-full px-2 dark:bg-gray-300'>Git</span>
-            <span className='bg-gray-600 rounded-full px-2 dark:bg-gray-300'>GitHub</span>
-            <span className='bg-gray-600 rounded-full px-2 dark:bg-gray-300'>Figma</span>
-          </h2>
-          <a
-            className='flex justify-center'
-            href="https://devlinks-one.vercel.app" 
-            target="_blank">
-            <img
-              className="max-w-sm pt-5 px-2 object-cover sm:max-w-xl md:max-w-2xl lg:max-w-4xl  
-              hover:scale-105 transition-all duration-200 ease-in hover:opacity-90"
-              src={capa}
-              alt="Projeto devlinks" />
-          </a>
+    <div
+      id='projects'
+      className='w-full h-screen flex flex-col items-center justify-center gap-7 border-b border-b-color-600'>
+      <p className='font-bold text-4xl md:text-5xl lg:text-6xl'>
+        Projetos
+      </p>
+      <div className='flex flex-col items-center justify-center gap-5 md:flex-row'>
+        <div className='w-52 h-40 md:w-80 md:h-60'>
+          <a 
+            href='https://devlinks-one.vercel.app/' target='_blank'>
+          <img
+            className='rounded-3xl border border-color-600 w-full h-full
+            hover:scale-110 transform transition-transform duration-300 ease-in-out cursor-pointer'
+            src={devlinks} 
+            alt="" />
+            </a>
+        </div>
+        <div className='w-52 h-40 md:w-80 md:h-60 '>
+          <img
+            className='rounded-3xl border border-color-600 w-full h-full
+            hover:scale-110 transform transition-transform duration-300 ease-in-out cursor-pointer' 
+            src={devlinks} 
+            alt="" />
         </div>
       </div>
-    </>
+    </div>
   )
 }
