@@ -1,8 +1,44 @@
+import 'animate.css';
+import { useEffect, useRef } from 'react';
+
 export function About() {
+
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    const handleScroll = () => {
+      if (!section) return;
+
+      const sectionRect = section.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (sectionRect.top < windowHeight && sectionRect.bottom >= 0) {
+        // A seção está visível na janela
+        section.classList.add('animate__animated', 'animate__fadeInRight');
+      } else {
+        // A seção não está visível na janela
+        section.classList.remove('animate__animated', 'animate__fadeInRight');
+      }
+    };
+
+    // Adicione um ouvinte de rolagem para verificar a visibilidade
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Verifique a visibilidade inicialmente
+
+    return () => {
+      // Remova o ouvinte de rolagem quando o componente for desmontado
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+    
   return (
     <div id="about"
       className="flex flex-col items-center justify-center h-screen border-b border-b-color-600">
-      <div className="flex flex-col items-center border-2 border-color-600 rounded-3xl gap-4 py-4 mx-4
+      <div 
+        ref={sectionRef}
+        className="flex flex-col items-center border-2 border-color-600 rounded-3xl gap-4 py-4 mx-4
       bg-color-700/30">
         <p
           className="text-2xl font-bold md:text-3xl lg:text-6xl">
