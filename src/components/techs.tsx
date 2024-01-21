@@ -9,7 +9,7 @@ export function Techs() {
   return (
     <div
       id="techs"
-      className="w-full h-screen flex flex-col items-center justify-center border-b border-b-color-600"
+      className="w-full h-screen flex flex-col items-center justify-center"
     >
       <p className="font-bold text-4xl md:text-5xl lg:text-6xl">Tecnologias</p>
       <div className="grid grid-cols-3 grid-rows-3 gap-10 mt-10 md:grid-cols-4 md:grid-rows-2">

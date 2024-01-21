@@ -4,7 +4,7 @@ export function Projects() {
   return (
     <div
       id="projects"
-      className="w-full h-screen flex flex-col items-center justify-center gap-7 border-b border-b-color-600"
+      className="w-full h-screen flex flex-col items-center justify-center gap-7"
     >
       <p className="font-bold text-4xl md:text-5xl lg:text-6xl">Projetos</p>
       <div className="flex flex-col items-center justify-center gap-5 md:flex-row">
