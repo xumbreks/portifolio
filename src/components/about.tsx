@@ -1,10 +1,34 @@
+import { useInView, useAnimation, motion } from "framer-motion";
+import { useRef, useEffect } from "react";
+
 export function About() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref);
+
+  const right = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      right.start({
+        x: 0,
+        transition: { duration: 1.5, type: "spring" },
+      });
+    } else {
+      right.start({
+        x: "-100%",
+      });
+    }
+  }, [isInView]);
+
   return (
     <div
       id="about"
       className="flex flex-col items-center justify-center h-screen"
     >
-      <div
+      <motion.div
+        ref={ref}
+        initial={{ x: "-100%" }}
+        animate={right}
         className="flex flex-col items-center border-2 border-color-600 rounded-3xl gap-4 py-4 mx-4
         bg-color-700/30"
       >
@@ -24,7 +48,7 @@ export function About() {
             aprimorar minhas habilidades como profissional.
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

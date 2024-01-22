@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import devlinks from "../assets/devlinks.png";
 
 export function Projects() {
@@ -10,9 +11,11 @@ export function Projects() {
       <div className="flex flex-col items-center justify-center gap-5 md:flex-row">
         <div className="w-52 h-40 md:w-80 md:h-60">
           <a href="https://brianrangel.com.br/" target="_blank">
-            <img
-              className="rounded-3xl border border-color-600 w-full h-full
-            hover:scale-110 transform transition-transform duration-300 ease-in-out cursor-pointer"
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              whileHover={{ scale: 1.1, type: "spring" }}
+              className="rounded-3xl border border-color-500 w-full h-full cursor-pointer"
               src={devlinks}
               alt=""
             />

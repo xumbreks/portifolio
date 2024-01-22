@@ -13,20 +13,18 @@ export function Home() {
     if (isInView) {
       right.start({
         x: 0,
-        transition: { duration: 1.8, type: "spring" },
+        transition: { duration: 1.5, type: "spring" },
       });
       down.start({
         y: 0,
-        transition: { duration: 1.8, type: "spring" },
+        transition: { duration: 1.5, type: "spring" },
       });
     } else {
       right.start({
         x: "-100%",
-        transition: { duration: 1.8, type: "spring" },
       });
       down.start({
         y: "-100%",
-        transition: { duration: 1.8, type: "spring" },
       });
     }
   }, [isInView]);
