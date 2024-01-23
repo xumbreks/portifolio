@@ -18,9 +18,6 @@ module.exports = {
           400: "#FFFFFF",
         },
       },
-      animation: {
-        "bounce-slow": "bounce 3s linear infinite",
-      },
     },
   },
   plugins: [],

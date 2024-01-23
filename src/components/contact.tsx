@@ -3,27 +3,35 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export function Contact() {
+  const up = useAnimation();
+  const left = useAnimation();
+  const down = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref);
-  const right = useAnimation();
-  const left = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      right.start({
-        x: 0,
-        transition: { duration: 1.0, type: "spring" },
+      up.start({
+        y: 0,
+        transition: { duration: 1.5, type: "spring" },
       });
       left.start({
         x: 0,
-        transition: { duration: 1.0, type: "spring" },
+        transition: { duration: 1.5, type: "spring" },
+      });
+      down.start({
+        y: 0,
+        transition: { duration: 1.5, type: "spring" },
       });
     } else {
-      right.start({
-        x: "-100%",
+      up.start({
+        y: "-100%",
       });
       left.start({
-        x: "100%",
+        x: "-100%",
+      });
+      down.start({
+        y: "100%",
       });
     }
   }, [isInView]);
@@ -36,8 +44,8 @@ export function Contact() {
       <p className="text-6xl font-bold">Contato</p>
       <motion.div
         ref={ref}
-        initial={{ x: "-100%" }}
-        animate={right}
+        initial={{ y: "-100%" }}
+        animate={up}
         className="border-2 border-color-700 rounded-md w-[17.5rem] h-auto py-1 flex justify-center items-center
       hover:bg-color-800 hover:border-color-600 transition-colors"
       >
@@ -51,7 +59,7 @@ export function Contact() {
         </a>
       </motion.div>
       <motion.div
-        initial={{ x: "100%" }}
+        initial={{ x: "-100%" }}
         animate={left}
         className="border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1 flex justify-center items-center
       hover:bg-color-800 hover:border-color-600 transition-colors"
@@ -66,8 +74,8 @@ export function Contact() {
         </a>
       </motion.div>
       <motion.div
-        initial={{ x: "-100%" }}
-        animate={right}
+        initial={{ y: "100%" }}
+        animate={down}
         className="border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1 flex justify-center items-center
       hover:bg-color-800 hover:border-color-600 transition-colors md:hidden"
       >

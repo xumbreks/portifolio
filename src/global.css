@@ -7,5 +7,6 @@ html {
 }
 
 body {
-  @apply bg-gradient-to-l from-black via-gray-900 to-black text-white font-roboto antialiased
+  @apply bg-gradient-to-l from-black via-gray-900 to-black 
+  bg-no-repeat text-white font-roboto antialiased overflow-x-hidden
 }
