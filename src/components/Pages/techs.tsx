@@ -1,9 +1,9 @@
-import html from "../assets/html.png";
-import javascript from "../assets/javascript.png";
-import node from "../assets/node.png";
-import react from "../assets/react.png";
-import tailwind from "../assets/tailwind.png";
-import typescript from "../assets/typescript.png";
+import html from "../../assets/html.png";
+import javascript from "../../assets/javascript.png";
+import node from "../../assets/node.png";
+import react from "../../assets/react.png";
+import tailwind from "../../assets/tailwind.png";
+import typescript from "../../assets/typescript.png";
 
 export function Techs() {
   return (

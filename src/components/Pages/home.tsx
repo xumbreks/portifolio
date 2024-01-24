@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import brian from "../assets/brian.png";
+import brian from "../../assets/brian.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 export function Home() {

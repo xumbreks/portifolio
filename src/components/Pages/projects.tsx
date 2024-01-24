@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import devlinks from "../assets/devlinks.png";
+import devlinks from "../../assets/devlinks.png";
 
 export function Projects() {
   return (
