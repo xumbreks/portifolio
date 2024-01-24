@@ -1,22 +1,19 @@
 import { TabsTrigger } from "@radix-ui/react-tabs";
 import { motion } from "framer-motion";
 
-export interface ItemsNavProps {
+export interface NavbarItemsProps {
   value: string;
   title: string;
   isSelected?: boolean;
-  onClick?: () => void;
 }
 
-export function ItemsNav({
+export function NavbarItems({
   value,
   title,
-  onClick,
   isSelected = false,
-}: ItemsNavProps) {
+}: NavbarItemsProps) {
   return (
     <TabsTrigger
-      onClick={onClick}
       value={value}
       className="relative px-1 font-medium hover:text-zinc-200 data-[state=active]:text-zinc-200"
     >

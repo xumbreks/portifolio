@@ -1,82 +1,78 @@
-import { GithubLogo } from "@phosphor-icons/react";
 import { Tabs, TabsList } from "@radix-ui/react-tabs";
-import { ItemsNav } from "./NavbarItems/itemsNav";
-import { SetStateAction, useState } from "react";
+import { NavbarItems } from "./NavbarItems";
+import { useState } from "react";
+import { Home } from "./Pages/home";
+import { About } from "./Pages/about";
+import { Techs } from "./Pages/techs";
+import { Projects } from "./Pages/projects";
+import { Contact } from "./Pages/contact";
+import { ButtonHome } from "./Buttons/buttonHome";
+import { ButtonGithub } from "./Buttons/buttonGithub";
 
 export function Navbar() {
-  const [currentTab, setCurrentTab] = useState("home");
-
-  const handleNavItemClick = (value: SetStateAction<string>) => {
-    setCurrentTab(value);
-    const element = document.getElementById(value as string);
-    if (element) {
-      element.scrollIntoView();
-    }
-  };
+  const isMobile = window.innerWidth <= 768;
+  const [currentTab, setCurrentTab] = useState(
+    isMobile ? "buttonHome" : "home"
+  );
 
   return (
     <>
-      <nav
-        className="flex h-[3.75rem] w-screen items-center justify-center fixed 
+      <div
+        className="flex min-h-[3.75rem] w-full items-center justify-center fixed
       bg-gradient-to-l from-black via-gray-900 to-black z-10
       md:justify-around"
       >
-        <Tabs
-          value={currentTab}
-          onValueChange={setCurrentTab}
-          className="hidden md:flex"
-        >
-          <TabsList className="font-medium font-robotoSlab cursor-pointer md:text-xl lg:text-2xl">
-            <ItemsNav
+        <Tabs value={currentTab} onValueChange={setCurrentTab} className="flex">
+          <TabsList className="hidden md:flex font-medium font-robotoSlab md:text-xl lg:text-2xl">
+            <NavbarItems
               value="home"
               title="< Brian Rangel /> "
               isSelected={currentTab === "home"}
-              onClick={() => handleNavItemClick("home")}
+            />
+          </TabsList>
+          <TabsList className="md:hidden">
+            <ButtonHome
+              value="buttonHome"
+              isSelected={currentTab === "buttonHome"}
             />
           </TabsList>
         </Tabs>
         <Tabs value={currentTab} onValueChange={setCurrentTab}>
           <TabsList className="flex w-full gap-2 md:gap-7 lg:text-xl">
-            <ItemsNav
+            <NavbarItems
               value="about"
               title="Sobre"
               isSelected={currentTab === "about"}
-              onClick={() => handleNavItemClick("about")}
             />
-            <ItemsNav
+            <NavbarItems
               value="techs"
               title="Tecnologias"
               isSelected={currentTab === "techs"}
-              onClick={() => handleNavItemClick("techs")}
             />
-            <ItemsNav
+            <NavbarItems
               value="projects"
               title="Projetos"
               isSelected={currentTab === "projects"}
-              onClick={() => handleNavItemClick("projects")}
             />
-            <ItemsNav
+            <NavbarItems
               value="contact"
               title="Contato"
               isSelected={currentTab === "contact"}
-              onClick={() => handleNavItemClick("contact")}
             />
           </TabsList>
         </Tabs>
-        <a href="https://www.github.com/xumbreks" target="_blank">
-          <div className="hidden items-center space-x-1 md:flex">
-            <div className="border bg-color-900 border-color-500 rounded-full w-7 h-7 flex items-center justify-center">
-              <GithubLogo size={20} />
-            </div>
-            <p
-              className="text-color-500/70 font-medium text-lg underline underline-offset-2
-            hover:text-color-500 transition-colors"
-            >
-              brianrangel
-            </p>
-          </div>
-        </a>
-      </nav>
+        <Tabs>
+          <TabsList className="hidden md:flex">
+            <ButtonGithub />
+          </TabsList>
+        </Tabs>
+      </div>
+      {currentTab === "buttonHome" && <Home />}
+      {currentTab === "home" && <Home />}
+      {currentTab === "about" && <About />}
+      {currentTab === "techs" && <Techs />}
+      {currentTab === "projects" && <Projects />}
+      {currentTab === "contact" && <Contact />}
     </>
   );
 }

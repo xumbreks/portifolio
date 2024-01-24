@@ -33,7 +33,7 @@ export function Home() {
     <div
       id="home"
       className="w-full h-screen flex flex-col-reverse items-center justify-center 
-     md:flex-row md:space-x-10 md:px-10"
+    md:flex-row md:space-x-10 md:px-10"
     >
       <div className="mt-10 md:mt-0">
         <motion.p
