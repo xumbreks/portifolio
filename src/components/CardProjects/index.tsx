@@ -1,4 +1,4 @@
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 export interface CardProjectsProps {
   src: string;
@@ -11,7 +11,7 @@ export function CardProjects({ src, href }: CardProjectsProps) {
       <a href={href} target="_blank">
         <motion.img
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 3 } }}
+          animate={{ opacity: 1, transition: { duration: 1.5 } }}
           whileHover={{ scale: 1.1, type: "spring" }}
           className="rounded-3xl border border-color-500 w-full h-full cursor-pointer"
           src={src}

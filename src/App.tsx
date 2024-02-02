@@ -1,4 +1,3 @@
-import { ButtonHome } from "./components/Buttons/buttonHome";
 import { Navbar } from "./components/navbar";
 
 import "./global.css";

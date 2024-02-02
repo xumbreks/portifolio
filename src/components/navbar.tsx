@@ -30,7 +30,7 @@ export function Navbar() {
               isSelected={currentTab === "home"}
             />
           </TabsList>
-          <TabsList className="md:hidden">
+          <TabsList className="md:hidden flex mx-2">
             <ButtonHome
               value="buttonHome"
               isSelected={currentTab === "buttonHome"}
