@@ -23,7 +23,7 @@ export function Techs() {
         className="w-full max-w-xs md:max-w-screen-sm lg:max-w-screen-lg"
         opts={{ loop: true }}
       >
-        <CarouselContent className="ml-4">
+        <CarouselContent className="flex items-center h-screen ml-4">
           <CarouselItem className="lg:basis-1/3">
             <CardTechs background="bg-[#ff571a]" title="html" src={html}>
               Linguagem de marcação padrão para criar e estruturar páginas web.

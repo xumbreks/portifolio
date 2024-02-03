@@ -1,22 +1,34 @@
 import { motion } from "framer-motion";
+import { Card, CardContent, CardFooter } from "../ui/card";
 
 export interface CardProjectsProps {
   src: string;
+  children: string;
   href: string;
 }
 
-export function CardProjects({ src, href }: CardProjectsProps) {
+export function CardProjects({ src, children, href }: CardProjectsProps) {
   return (
-    <div className="w-36 h-28 lg:w-80 lg:h-60">
-      <a href={href} target="_blank">
-        <motion.img
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1.5 } }}
-          whileHover={{ scale: 1.1, type: "spring" }}
-          className="rounded-3xl border border-color-500 w-full h-full cursor-pointer"
-          src={src}
-        />
-      </a>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 1.2 } }}
+      whileHover={{ scale: 1.02, opacity: 0.85 }}
+    >
+      <Card className="relative w-72 h-80 mx-4 border-color-700 bg-gradient-to-l from-black via-gray-900 to-black">
+        <CardContent className="p-0">
+          <img src={src} className="w-80 h-40 rounded-t-lg" />
+          <p className="p-4 font-semibold">{children}</p>
+        </CardContent>
+        <CardFooter>
+          <a
+            className="absolute left-4 bottom-2 underline underline-offset-2 text-zinc-400 hover:text-color-500 transition-colors"
+            href={href}
+            target="_blank"
+          >
+            acesse aqui.
+          </a>
+        </CardFooter>
+      </Card>
+    </motion.div>
   );
 }
