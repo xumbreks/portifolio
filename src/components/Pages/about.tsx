@@ -29,7 +29,8 @@ export function About() {
         ref={ref}
         initial={{ x: "-100%" }}
         animate={right}
-        className="flex flex-col items-center border-2 border-color-600 rounded-3xl gap-4 py-4 mx-4"
+        className="flex flex-col items-center bg-gradient-to-l from-black via-gray-900 to-black 
+        border border-color-700 rounded-3xl gap-4 py-4 mx-4"
       >
         <div className="w-full h-auto flex justify-center items-center">
           <p className="max-w-[51.25rem] h-auto leading-relaxed font-medium text-base px-7 md:text-xl lg:text-2xl">
