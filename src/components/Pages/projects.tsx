@@ -1,5 +1,6 @@
 import devlinks from "../../assets/devlinks.png";
 import biscoitoDaSorte from "../../assets/biscoitoDaSorte.png";
+import todoReact from "../../assets/todoReact.png";
 import { CardProjects } from "../CardProjects";
 import {
   Carousel,
@@ -28,6 +29,14 @@ export function Projects() {
               href="https://biscoitodasorte-two.vercel.app"
             >
               Teste a sua sorte e veja o que tem para você hoje.
+            </CardProjects>
+          </CarouselItem>
+          <CarouselItem className="lg:basis-1/3">
+            <CardProjects
+              src={todoReact}
+              href="https://to-do-react-kohl.vercel.app"
+            >
+              Adicione suas tarefas diárias.
             </CardProjects>
           </CarouselItem>
         </CarouselContent>
