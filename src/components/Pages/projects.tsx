@@ -1,6 +1,7 @@
 import devlinks from "../../assets/devlinks.png";
 import biscoitoDaSorte from "../../assets/biscoitoDaSorte.png";
 import todoReact from "../../assets/todoReact.png";
+import nlwexpert from "../../assets/nlw-expert.png";
 import { CardProjects } from "../CardProjects";
 import {
   Carousel,
@@ -37,6 +38,14 @@ export function Projects() {
               href="https://to-do-react-kohl.vercel.app"
             >
               Adicione suas tarefas diárias.
+            </CardProjects>
+          </CarouselItem>
+          <CarouselItem className="lg:basis-1/3">
+            <CardProjects
+              src={nlwexpert}
+              href="https://nlw-expert-kohl.vercel.app"
+            >
+              Adicione tarefas digitando ou falando.
             </CardProjects>
           </CarouselItem>
         </CarouselContent>
