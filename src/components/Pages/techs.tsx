@@ -6,12 +6,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { CardTechs } from "@/components/CardTechs";
-import html from "../../assets/html.png";
-import tailwind from "../../assets/tailwind.png";
-import javascript from "../../assets/javascript.png";
-import typescript from "../../assets/typescript.png";
-import react from "../../assets/react.png";
-import node from "../../assets/node.png";
+import html from "../../assets/html.webp";
+import tailwind from "../../assets/tailwind.webp";
+import javascript from "../../assets/javascript.webp";
+import typescript from "../../assets/typescript.webp";
+import react from "../../assets/react.webp";
+import node from "../../assets/node.webp";
 
 export function Techs() {
   return (

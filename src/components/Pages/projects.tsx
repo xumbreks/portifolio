@@ -1,7 +1,7 @@
-import devlinks from "../../assets/devlinks.png";
-import biscoitoDaSorte from "../../assets/biscoitoDaSorte.png";
-import todoReact from "../../assets/todoReact.png";
-import nlwexpert from "../../assets/nlw-expert.png";
+import devlinks from "../../assets/devlinks.webp";
+import biscoitoDaSorte from "../../assets/biscoitoDaSorte.webp";
+import todoReact from "../../assets/todoReact.webp";
+import nlwexpert from "../../assets/nlw-expert.webp";
 import { CardProjects } from "../CardProjects";
 import {
   Carousel,
