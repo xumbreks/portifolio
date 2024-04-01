@@ -1,4 +1,9 @@
-import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import {
+  GithubLogo,
+  InstagramLogo,
+  LinkedinLogo,
+  WhatsappLogo,
+} from "@phosphor-icons/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -76,6 +81,21 @@ export function Contact() {
       <motion.div
         initial={{ y: "100%" }}
         animate={down}
+        className="border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1 flex justify-center items-center
+      hover:bg-color-800 hover:border-color-600 transition-colors"
+      >
+        <a
+          className="flex justify-center items-center gap-2"
+          href="https://wa.me/351910025357"
+          target="_blank"
+        >
+          <WhatsappLogo size={35} weight="fill" />
+          <p className="font-bold text-xl">Whatsapp</p>
+        </a>
+      </motion.div>
+      <motion.div
+        initial={{ x: "-100%" }}
+        animate={left}
         className="border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1 flex justify-center items-center
       hover:bg-color-800 hover:border-color-600 transition-colors md:hidden"
       >
