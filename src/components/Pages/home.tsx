@@ -32,7 +32,7 @@ export function Home() {
   return (
     <div
       id="home"
-      className="w-full h-screen flex flex-col-reverse items-center justify-center 
+      className="w-full h-dvh flex flex-col-reverse items-center justify-center 
     md:flex-row md:space-x-10 md:px-10"
     >
       <div className="mt-10 md:mt-0">

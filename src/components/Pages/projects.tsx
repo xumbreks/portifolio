@@ -13,7 +13,7 @@ import {
 
 export function Projects() {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-full flex items-center justify-center">
       <Carousel
         className="w-full max-w-xs md:max-w-screen-sm lg:max-w-screen-lg"
         opts={{ loop: true }}

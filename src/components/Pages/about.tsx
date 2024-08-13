@@ -21,10 +21,7 @@ export function About() {
   }, [isInView]);
 
   return (
-    <div
-      id="about"
-      className="flex flex-col items-center justify-center h-screen"
-    >
+    <div id="about" className="flex flex-col items-center justify-center h-dvh">
       <motion.div
         ref={ref}
         initial={{ x: "-100%" }}

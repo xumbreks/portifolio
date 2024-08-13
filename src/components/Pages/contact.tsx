@@ -44,7 +44,7 @@ export function Contact() {
   return (
     <div
       id="contact"
-      className=" relative w-full h-screen flex flex-col items-center justify-center gap-10"
+      className=" relative w-full h-dvh flex flex-col items-center justify-center gap-10"
     >
       <p className="text-6xl font-bold">Contato</p>
 
