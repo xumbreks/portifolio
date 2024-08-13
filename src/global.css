@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply scroll-smooth
-}
-
 body {
-  @apply bg-gradient-to-l from-black via-gray-900 to-black 
-  bg-no-repeat text-white font-roboto antialiased
+  @apply bg-gradient-to-l from-black via-gray-900 to-black bg-no-repeat bg-center text-zinc-50 font-roboto antialiased
 }
