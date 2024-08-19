@@ -6,15 +6,10 @@ export interface CardTechsProps {
   title: string;
   src: string;
   children: string;
-  background: string;
+  className: string;
 }
 
-export function CardTechs({
-  background,
-  title,
-  src,
-  children,
-}: CardTechsProps) {
+export function CardTechs({ className, title, src, children }: CardTechsProps) {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -35,8 +30,8 @@ export function CardTechs({
 
   return (
     <motion.div ref={ref} initial={{ scale: 0.5 }} animate={effectScale}>
-      <Card className="max-w-60 h-80 mx-4 border-color-700 bg-gradient-to-l from-black via-gray-900 to-black">
-        <CardHeader className={`${background} rounded-t-lg flex items-center`}>
+      <Card className="max-w-60 h-80 mx-4 border-gray-700 bg-gradient-to-l from-black via-gray-900 to-black">
+        <CardHeader className={`${className} rounded-t-lg flex items-center`}>
           <CardTitle className="uppercase font-bold">{title}</CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col items-center">

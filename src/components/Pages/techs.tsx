@@ -25,13 +25,13 @@ export function Techs() {
       >
         <CarouselContent className="flex items-center h-screen ml-4">
           <CarouselItem className="lg:basis-1/3">
-            <CardTechs background="bg-[#ff571a]" title="html" src={html}>
+            <CardTechs className="bg-tech-html" title="html" src={html}>
               Linguagem de marcação padrão para criar e estruturar páginas web.
             </CardTechs>
           </CarouselItem>
           <CarouselItem className="lg:basis-1/3">
             <CardTechs
-              background="bg-[#38bdf8]"
+              className="bg-tech-tailwind"
               title="tailwind"
               src={tailwind}
             >
@@ -41,7 +41,7 @@ export function Techs() {
           </CarouselItem>
           <CarouselItem className="lg:basis-1/3">
             <CardTechs
-              background="bg-[#F0DF3B]"
+              className="bg-tech-javascript"
               title="javascript"
               src={javascript}
             >
@@ -51,7 +51,7 @@ export function Techs() {
           </CarouselItem>
           <CarouselItem className="lg:basis-1/3">
             <CardTechs
-              background="bg-[#3178c6]"
+              className="bg-tech-typescript"
               title="typescript"
               src={typescript}
             >
@@ -61,17 +61,10 @@ export function Techs() {
             </CardTechs>
           </CarouselItem>
           <CarouselItem className="lg:basis-1/3">
-            <CardTechs background="bg-[#149eca]" title="react" src={react}>
+            <CardTechs className="bg-tech-react" title="react" src={react}>
               Biblioteca JavaScript de código aberto para criação de interfaces
               de usuário, baseada em componentes, facilitando o desenvolvimento
               de aplicativos web modernos e responsivos.
-            </CardTechs>
-          </CarouselItem>
-          <CarouselItem className="lg:basis-1/3">
-            <CardTechs background="bg-[#026e00]" title="node" src={node}>
-              Ambiente de tempo de execução JavaScript que permite executar
-              código JavaScript no lado do servidor, permitindo a construção de
-              aplicativos web escaláveis e em tempo real.
             </CardTechs>
           </CarouselItem>
         </CarouselContent>

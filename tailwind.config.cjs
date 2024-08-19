@@ -17,18 +17,21 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        insta:
+          "linear-gradient(to bottom  right, #515bd4, #8134af, #dd2a7b, #feda77, #f58529  )",
+      },
       fontFamily: {
         roboto: ["roboto", "sans-serif"],
         robotoSlab: ["roboto-slab", "sans-serif"],
       },
       colors: {
-        color: {
-          900: "#000000",
-          800: "#001F3F",
-          700: "#36454F",
-          600: "#FFD700",
-          500: "#FFFAF0",
-          400: "#FFFFFF",
+        tech: {
+          html: "#ff571a",
+          tailwind: "#38bdf8",
+          javascript: "#F0DF3B",
+          typescript: "#3178c6",
+          react: "#149eca",
         },
       },
       keyframes: {

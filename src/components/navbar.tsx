@@ -17,11 +17,7 @@ export function Navbar() {
 
   return (
     <>
-      <div
-        className="flex min-h-[3.75rem] w-full items-center justify-center fixed z-10
-      bg-gradient-to-l from-black via-gray-900 to-black
-      md:justify-around"
-      >
+      <div className="flex min-h-[3.75rem] w-full items-center justify-center fixed z-10 md:justify-around">
         <Tabs value={currentTab} onValueChange={setCurrentTab} className="flex">
           <TabsList className="hidden md:flex font-medium font-robotoSlab md:text-xl lg:text-2xl">
             <NavbarItems

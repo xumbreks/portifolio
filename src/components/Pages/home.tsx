@@ -32,8 +32,7 @@ export function Home() {
   return (
     <div
       id="home"
-      className="w-full h-dvh flex flex-col-reverse items-center justify-center 
-    md:flex-row md:space-x-10 md:px-10"
+      className="w-full h-dvh flex flex-col-reverse items-center justify-center md:flex-row md:space-x-10 md:px-10"
     >
       <div className="mt-10 md:mt-0">
         <motion.p
@@ -42,16 +41,17 @@ export function Home() {
           animate={right}
           className="font-medium text-lg px-5 md:px-0 md:text-2xl lg:text-[2rem] max-w-3xl"
         >
-          Olá 👋🏻 ,<br />
+          Olá 🙋🏻‍♂️ ,<br />
           eu sou o Brian Rangel,
           <br />
-          um Desenvolvedor <span className="text-color-600">WEB</span>,
-          apaixonado por
-          <span className="text-color-600"> Tecnologia.</span>
+          um Desenvolvedor Frontend 👨🏻‍💻.
+          <br />
+          Transformo ideias em experiências digitais cativantes.
         </motion.p>
       </div>
+
       <motion.img
-        className="w-56 h-auto border-2 border-color-600 rounded-full md:w-[18.75rem] md:h-auto"
+        className="w-56  rounded-full border border-gray-700 h-auto md:w-[18.75rem] md:h-auto"
         initial={{ y: "-100%" }}
         animate={down}
         src={brian}

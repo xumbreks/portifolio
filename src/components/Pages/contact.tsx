@@ -1,10 +1,11 @@
-import {
-  GithubLogo,
-  InstagramLogo,
-  LinkedinLogo,
-  WhatsappLogo,
-} from "@phosphor-icons/react";
 import { motion, useAnimation, useInView } from "framer-motion";
+
+import {
+  WhatsappLogo,
+  InstagramLogo,
+  GithubLogo,
+  LinkedinLogo,
+} from "@phosphor-icons/react";
 import { useEffect, useRef } from "react";
 
 export function Contact() {
@@ -52,48 +53,60 @@ export function Contact() {
         ref={ref}
         initial={{ y: "-100%" }}
         animate={up}
-        className="flex justify-center items-center gap-2 border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1
-          hover:bg-color-800 hover:border-color-600 transition-colors"
+        className="group flex justify-center items-center gap-2 border border-gray-500 rounded-md  w-[17.5rem] h-14 py-1
+          hover:bg-gray-950 hover:border-gray-700 transition-colors"
         href="https://www.linkedin.com/in/brianrangel"
         target="_blank"
       >
-        <LinkedinLogo size={35} weight="fill" />
+        <LinkedinLogo
+          weight="fill"
+          className="size-7 group-hover:fill-[#0e76a8] transition-colors"
+        />
         <p className="font-bold text-xl">Linkedin</p>
       </motion.a>
 
       <motion.a
         initial={{ x: "-100%" }}
         animate={left}
-        className="flex justify-center items-center gap-2 border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1
-          hover:bg-color-800 hover:border-color-600 transition-colors"
+        className="group flex justify-center items-center gap-2 border border-gray-500 rounded-md  w-[17.5rem] h-14 py-1
+          hover:bg-gray-950 hover:border-gray-700 transition-colors"
         href="https://www.instagram.com/brianrangel.dev"
         target="_blank"
       >
-        <InstagramLogo size={35} weight="fill" />
+        <InstagramLogo
+          weight="bold"
+          className="size-7 group-hover:bg-insta group-hover:rounded-full"
+        />
         <p className="font-bold text-xl">Instagram</p>
       </motion.a>
 
       <motion.a
         initial={{ y: "100%" }}
         animate={down}
-        className="flex justify-center items-center gap-2 border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1
-          hover:bg-color-800 hover:border-color-600 transition-colors"
+        className="group flex justify-center items-center gap-2 border border-gray-500 rounded-md  w-[17.5rem] h-14 py-1
+          hover:bg-gray-950 hover:border-gray-700 transition-colors"
         href="https://wa.me/351910025357"
         target="_blank"
       >
-        <WhatsappLogo size={35} weight="fill" />
+        <WhatsappLogo
+          weight="fill"
+          className="size-7 group-hover:fill-[#25d366]"
+        />
         <p className="font-bold text-xl">Whatsapp</p>
       </motion.a>
 
       <motion.a
         initial={{ x: "-100%" }}
         animate={left}
-        className="border-2 border-color-700 rounded-md  w-[17.5rem] h-14 py-1 flex justify-center items-center
-          hover:bg-color-800 hover:border-color-600 transition-colors md:hidden"
+        className="group border border-gray-500 rounded-md  w-[17.5rem] h-14 py-1 flex justify-center items-center
+          hover:bg-gray-950 hover:border-gray-700 transition-colors md:hidden"
         href="https://www.github.com/xumbreks"
         target="_blank"
       >
-        <GithubLogo size={35} weight="fill" />
+        <GithubLogo
+          weight="fill"
+          className="size-7 group-hover:fill-[#171515]"
+        />
         <p className="font-bold text-xl">Github</p>
       </motion.a>
 

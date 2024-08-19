@@ -21,7 +21,7 @@ export function NavbarItems({
       {isSelected && (
         <motion.div
           layoutId="activeTab"
-          className="absolute -bottom-px right-0 left-0 h-0.5 bg-color-500"
+          className="absolute -bottom-px right-0 left-0 h-px bg-gray-700"
         />
       )}
     </TabsTrigger>
