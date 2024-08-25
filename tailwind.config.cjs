@@ -21,6 +21,9 @@ module.exports = {
         insta:
           "linear-gradient(to bottom  right, #515bd4, #8134af, #dd2a7b, #feda77, #f58529  )",
       },
+      backgroundSize: {
+        "200-200": "200% 200%",
+      },
       fontFamily: {
         roboto: ["roboto", "sans-serif"],
         robotoSlab: ["roboto-slab", "sans-serif"],
@@ -35,18 +38,19 @@ module.exports = {
         },
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        gradient: {
+          "0%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+          "100%": { "background-position": "0% 50%" },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        scroll: "scroll 5s linear infinite",
+        gradient: "gradient 5s infinite",
       },
     },
   },

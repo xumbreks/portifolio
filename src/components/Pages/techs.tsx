@@ -11,7 +11,6 @@ import tailwind from "../../assets/tailwind.webp";
 import javascript from "../../assets/javascript.webp";
 import typescript from "../../assets/typescript.webp";
 import react from "../../assets/react.webp";
-import node from "../../assets/node.webp";
 
 export function Techs() {
   return (
@@ -19,10 +18,7 @@ export function Techs() {
       id="techs"
       className="h-screen flex flex-col items-center justify-center gap-2"
     >
-      <Carousel
-        className="w-full max-w-xs md:max-w-screen-sm lg:max-w-screen-lg"
-        opts={{ loop: true }}
-      >
+      <Carousel className="w-full max-w-xs md:max-w-screen-sm lg:max-w-screen-lg">
         <CarouselContent className="flex items-center h-screen ml-4">
           <CarouselItem className="lg:basis-1/3">
             <CardTechs className="bg-tech-html" title="html" src={html}>

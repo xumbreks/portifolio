@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gradient-to-br from-black from-30% to-gray-900 bg-no-repeat bg-center text-gray-50 font-roboto antialiased
-
+  @apply bg-gradient-to-br from-black from-30% to-gray-900 bg-no-repeat text-gray-50 font-roboto antialiased
+  animate-gradient bg-200-200
 }

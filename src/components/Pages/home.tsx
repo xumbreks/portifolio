@@ -1,6 +1,11 @@
 import { useEffect, useRef } from "react";
 import brian from "../../assets/brian.png";
 import { motion, useAnimation, useInView } from "framer-motion";
+import html from "../../assets/html.webp";
+import tailwind from "../../assets/tailwind.webp";
+import javascript from "../../assets/javascript.webp";
+import typescript from "../../assets/typescript.webp";
+import react from "../../assets/react.webp";
 
 export function Home() {
   const ref = useRef<HTMLParagraphElement>(null);
