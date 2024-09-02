@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter } from "../ui/card";
 export interface CardProjectsProps {
   src: string;
   href: string;
+  href1: string;
   description: string;
   children?: React.ReactNode;
 }
@@ -11,6 +12,7 @@ export interface CardProjectsProps {
 export function CardProjects({
   src,
   href,
+  href1,
   description,
   children,
 }: CardProjectsProps) {
@@ -20,23 +22,30 @@ export function CardProjects({
       animate={{ opacity: 1, transition: { duration: 1.2 } }}
       whileHover={{ scale: 1.02, opacity: 0.85 }}
     >
-      <Card className="relative lg:w-[95%] mx-4 border-gray-700 bg-gradient-to-l from-black via-gray-900 to-black">
-        <CardContent className="p-0 min-h-96 lg:h-[70vh]">
-          <div className="w-full flex justify-center bg-gray-800">
-            <img src={src} className=" lg:h-[35vh] rounded-t-lg" />
+      <Card className="max-w-xs border-gray-700">
+        <CardContent className="p-0 h-72">
+          <div className="">
+            <img src={src} className="p-1" />
           </div>
           <p className="p-4 font-semibold">
             {description}
             {children}
           </p>
         </CardContent>
-        <CardFooter>
+        <CardFooter className="px-2 flex justify-between">
           <a
-            className="absolute left-4 bottom-2 underline underline-offset-2 text-gray-400 hover:text-gray-500 transition-colors"
-            href={href}
+            className="border border-gray-400 rounded bg-sky-900 hover:bg-sky-950 transition-colors px-2 py-1 cursor-pointer"
             target="_blank"
+            href={href}
           >
-            acesse aqui.
+            ACESSE AQUI
+          </a>
+          <a
+            className="border border-gray-500 rounded bg-gray-800 hover:bg-gray-900 transition-colors px-3 py-1 cursor-pointer"
+            target="_blank"
+            href={href1}
+          >
+            GITHUB
           </a>
         </CardFooter>
       </Card>

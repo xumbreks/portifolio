@@ -1,74 +1,74 @@
-import { Tabs, TabsList } from "@radix-ui/react-tabs";
+import { useEffect, useState } from "react";
 import { NavbarItems } from "./NavbarItems";
-import { useState } from "react";
-import { Home } from "./Pages/home";
-import { About } from "./Pages/about";
-import { Techs } from "./Pages/techs";
-import { Projects } from "./Pages/projects";
-import { Contact } from "./Pages/contact";
-import { ButtonHome } from "./Buttons/buttonHome";
 import { ButtonGithub } from "./Buttons/buttonGithub";
+import { Home, Menu, X } from "lucide-react";
 
 export function Navbar() {
-  const isMobile = window.innerWidth <= 768;
-  const [currentTab, setCurrentTab] = useState(
-    isMobile ? "buttonHome" : "home"
-  );
+  const [selectedItem, setSelectedItem] = useState("< Brian Rangel />");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash && hash !== "#home") {
+      setSelectedItem(hash.slice(1));
+    }
+  }, []);
 
   return (
     <>
-      <div className="flex min-h-[3.75rem] w-full items-center justify-center fixed z-10 md:justify-around">
-        <Tabs value={currentTab} onValueChange={setCurrentTab} className="flex">
-          <TabsList className="hidden md:flex font-medium font-robotoSlab md:text-xl lg:text-2xl">
-            <NavbarItems
-              value="home"
-              title="< Brian Rangel /> "
-              isSelected={currentTab === "home"}
-            />
-          </TabsList>
-          <TabsList className="md:hidden flex mx-2">
-            <ButtonHome
-              value="buttonHome"
-              isSelected={currentTab === "buttonHome"}
-            />
-          </TabsList>
-        </Tabs>
-        <Tabs value={currentTab} onValueChange={setCurrentTab}>
-          <TabsList className="flex w-full gap-2 md:gap-7 lg:text-xl">
-            <NavbarItems
-              value="about"
-              title="Sobre"
-              isSelected={currentTab === "about"}
-            />
-            <NavbarItems
-              value="techs"
-              title="Tecnologias"
-              isSelected={currentTab === "techs"}
-            />
-            <NavbarItems
-              value="projects"
-              title="Projetos"
-              isSelected={currentTab === "projects"}
-            />
-            <NavbarItems
-              value="contact"
-              title="Contato"
-              isSelected={currentTab === "contact"}
-            />
-          </TabsList>
-        </Tabs>
-        <Tabs>
-          <TabsList className="hidden md:flex">
-            <ButtonGithub />
-          </TabsList>
-        </Tabs>
-      </div>
-      {currentTab === "buttonHome" && <Home />}
-      {currentTab === "home" && <Home />}
-      {currentTab === "about" && <About />}
-      {currentTab === "techs" && <Techs />}
-      {currentTab === "projects" && <Projects />}
-      {currentTab === "contact" && <Contact />}
+      <nav
+        className="flex min-h-[3.75rem] w-full items-center fixed z-10 md:justify-around
+      bg-black/30 backdrop-blur-lg shadow-lg px-4 md:px-8"
+      >
+        <div className="font-medium font-robotoSlab text-2xl hidden md:block">
+          <NavbarItems
+            href="#home"
+            title="< Brian Rangel />"
+            isSelected={selectedItem === "< Brian Rangel />"}
+            onClick={() => setSelectedItem("< Brian Rangel />")}
+          />
+        </div>
+
+        <div className="flex md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+        <div
+          className={`flex-col md:flex md:flex-row gap-2 md:gap-7 lg:text-xl ${
+            menuOpen ? "flex" : "hidden"
+          } md:flex`}
+        >
+          <NavbarItems
+            href="#about"
+            title="Sobre"
+            isSelected={selectedItem === "Sobre"}
+            onClick={() => setSelectedItem("Sobre")}
+          />
+          <NavbarItems
+            href="#projects"
+            title="Projetos"
+            isSelected={selectedItem === "Projetos"}
+            onClick={() => setSelectedItem("Projetos")}
+          />
+          <NavbarItems
+            href="#contact"
+            title="Contato"
+            isSelected={selectedItem === "Contato"}
+            onClick={() => setSelectedItem("Contato")}
+          />
+        </div>
+
+        <div className="hidden md:block">
+          <ButtonGithub />
+        </div>
+      </nav>
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50"
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
     </>
   );
 }

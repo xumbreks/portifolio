@@ -1,11 +1,6 @@
 import { useEffect, useRef } from "react";
 import brian from "../../assets/brian.png";
 import { motion, useAnimation, useInView } from "framer-motion";
-import html from "../../assets/html.webp";
-import tailwind from "../../assets/tailwind.webp";
-import javascript from "../../assets/javascript.webp";
-import typescript from "../../assets/typescript.webp";
-import react from "../../assets/react.webp";
 
 export function Home() {
   const ref = useRef<HTMLParagraphElement>(null);
@@ -35,7 +30,7 @@ export function Home() {
   }, [isInView]);
 
   return (
-    <div
+    <section
       id="home"
       className="w-full h-dvh flex flex-col-reverse items-center justify-center md:flex-row md:space-x-10 md:px-10"
     >
@@ -62,6 +57,6 @@ export function Home() {
         src={brian}
         alt="foto brian sorrindo"
       />
-    </div>
+    </section>
   );
 }
