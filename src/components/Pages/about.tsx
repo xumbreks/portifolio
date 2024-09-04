@@ -53,25 +53,41 @@ export function About() {
         initial={{ x: "-100%" }}
         animate={right}
       >
-        <a className="group cursor-pointer">
+        <a
+          className="group cursor-pointer"
+          href="https://www.linkedin.com/in/brianrangel"
+          target="_blank"
+        >
           <LinkedinLogo
             weight="fill"
             className="size-7 group-hover:fill-[#0e76a8] transition-colors"
           />
         </a>
-        <a className="group cursor-pointer">
+        <a
+          className="group cursor-pointer"
+          href="https://www.instagram.com/brianrangel.dev"
+          target="_blank"
+        >
           <InstagramLogo
             weight="bold"
             className="size-7 group-hover:bg-insta group-hover:rounded-full"
           />
         </a>
-        <a className="group cursor-pointer">
+        <a
+          className="group cursor-pointer"
+          href="https://wa.me/351910025357"
+          target="_blank"
+        >
           <WhatsappLogo
             weight="fill"
             className="size-7 group-hover:fill-[#25d366]"
           />
         </a>
-        <a className="group cursor-pointer">
+        <a
+          className="group cursor-pointer md:hidden"
+          href="https://www.github.com/xumbreks"
+          target="_blank"
+        >
           <GithubLogo
             weight="fill"
             className="size-7 group-hover:fill-[#171515]"
