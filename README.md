@@ -24,6 +24,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O site portifolio
 
-- [Acesse o projeto finalizado, online](https://portifolio-brian.vercel.app)
+- [Acesse o projeto finalizado, online](https://brianrangel.pt)
 
 Feito com ♥ by Brian
