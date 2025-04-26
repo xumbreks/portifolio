@@ -34,14 +34,14 @@ export function CardProjects({
         </CardContent>
         <CardFooter className="px-2 flex justify-between">
           <a
-            className="border border-gray-400 rounded bg-sky-900 hover:bg-sky-950 transition-colors px-2 py-1 cursor-pointer"
+            className="border border-gray-400 rounded-sm bg-sky-900 hover:bg-sky-950 transition-colors px-2 py-1 cursor-pointer"
             target="_blank"
             href={href}
           >
             ACESSE AQUI
           </a>
           <a
-            className="border border-gray-500 rounded bg-gray-800 hover:bg-gray-900 transition-colors px-3 py-1 cursor-pointer"
+            className="border border-gray-500 rounded-sm bg-gray-800 hover:bg-gray-900 transition-colors px-3 py-1 cursor-pointer"
             target="_blank"
             href={href1}
           >

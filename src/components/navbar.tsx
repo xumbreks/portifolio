@@ -1,101 +1,103 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
-import { ButtonGithub } from "./Buttons/buttonGithub";
-import { NavbarItems } from "./NavbarItems";
+import { useState } from "react";
+import { Button } from "./ui/button";
 
 export function Navbar() {
-	const [selectedItem, setSelectedItem] = useState("< Brian Rangel />");
-	const [menuOpen, setMenuOpen] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	useEffect(() => {
-		const hash = window.location.hash;
-		if (hash && hash !== "#home") {
-			setSelectedItem(hash.slice(1));
+	const scrollToSection = (id: string) => {
+		const element = document.getElementById(id);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" });
 		}
-	}, []);
+		setIsMenuOpen(false);
+	};
 
 	return (
 		<>
-			<nav
-				className="flex min-h-[3.75rem] w-full items-center fixed z-10 md:justify-around
-      	bg-black/30 backdrop-blur-lg shadow-lg px-4 md:px-8"
-			>
-				<div className="font-medium font-robotoSlab text-2xl hidden md:block">
-					<NavbarItems
-						href="#home"
-						title="< Brian Rangel />"
-						isSelected={selectedItem === "< Brian Rangel />"}
-						onClick={() => setSelectedItem("< Brian Rangel />")}
-					/>
-				</div>
-				<div className="flex md:hidden">
-					<button type="button" onClick={() => setMenuOpen(!menuOpen)}>
-						<AnimatePresence mode="wait" initial={false}>
-							{menuOpen ? (
-								<motion.div
-									key="close"
-									initial={{ opacity: 0, scale: 0.8 }}
-									animate={{ opacity: 1, scale: 1 }}
-									exit={{ opacity: 0, scale: 0.8 }}
+			<nav className="fixed top-0 w-full backdrop-blur-md z-50 border-b border-b-gray-400">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="flex justify-between h-16">
+						<div className="flex items-center">
+							<span className="text-xl font-bold"> {"< Brian />"}</span>
+						</div>
+
+						<div className="flex items-center space-x-4">
+							<div className="hidden md:flex items-center space-x-4">
+								<Button variant="ghost" onClick={() => scrollToSection("home")}>
+									Home
+								</Button>
+								<Button
+									variant="ghost"
+									onClick={() => scrollToSection("about")}
 								>
-									<X size={28} />
-								</motion.div>
-							) : (
-								<motion.div
-									key="menu"
-									initial={{ opacity: 0, scale: 0.8 }}
-									animate={{ opacity: 1, scale: 1 }}
-									exit={{ opacity: 0, scale: 0.8 }}
+									Sobre
+								</Button>
+								<Button
+									variant="ghost"
+									onClick={() => scrollToSection("projects")}
 								>
-									<Menu size={28} />
-								</motion.div>
-							)}
-						</AnimatePresence>
-					</button>
-				</div>
-				<div
-					className={`flex ml-2 gap-2 md:gap-7 lg:text-xl ${
-						menuOpen ? "flex" : "hidden"
-					} md:flex`}
-				>
-					<NavbarItems
-						href="#about"
-						title="Sobre"
-						isSelected={selectedItem === "Sobre"}
-						onClick={() => setSelectedItem("Sobre")}
-					/>
-					<NavbarItems
-						href="#projects"
-						title="Projetos"
-						isSelected={selectedItem === "Projetos"}
-						onClick={() => setSelectedItem("Projetos")}
-					/>
-					<NavbarItems
-						href="#contact"
-						title="Contato"
-						isSelected={selectedItem === "Contato"}
-						onClick={() => setSelectedItem("Contato")}
-					/>
+									Projetos
+								</Button>
+								<Button
+									variant="ghost"
+									onClick={() => scrollToSection("contact")}
+								>
+									Contato
+								</Button>
+							</div>
+						</div>
+
+						{/* Mobile Menu Button */}
+						<div className="md:hidden flex items-center">
+							<Button
+								variant="ghost"
+								onClick={() => setIsMenuOpen(!isMenuOpen)}
+								className="inline-flex items-center justify-center p-2"
+							>
+								<span className="sr-only">Open main menu</span>
+								{isMenuOpen ? <X /> : <Menu />}
+							</Button>
+						</div>
+					</div>
 				</div>
 
-				<div className="hidden md:block">
-					<ButtonGithub />
-				</div>
+				{/* Mobile Menu */}
+				{isMenuOpen && (
+					<div className="md:hidden">
+						<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-b">
+							<Button
+								variant="ghost"
+								className="w-full text-left"
+								onClick={() => scrollToSection("home")}
+							>
+								Home
+							</Button>
+							<Button
+								variant="ghost"
+								className="w-full text-left"
+								onClick={() => scrollToSection("about")}
+							>
+								Sobre
+							</Button>
+							<Button
+								variant="ghost"
+								className="w-full text-left"
+								onClick={() => scrollToSection("projects")}
+							>
+								Projetos
+							</Button>
+							<Button
+								variant="ghost"
+								className="w-full text-left"
+								onClick={() => scrollToSection("contact")}
+							>
+								Contato
+							</Button>
+						</div>
+					</div>
+				)}
 			</nav>
-			{menuOpen && (
-				<div
-					className="fixed inset-0"
-					onClick={() => setMenuOpen(false)}
-					onKeyDown={(e) => {
-						if (e.key === "Enter" || e.key === " ") {
-							setMenuOpen(false);
-						}
-					}}
-					role="button"
-					tabIndex={0}
-				/>
-			)}
 		</>
 	);
 }
