@@ -3,7 +3,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: Space Grotesk, sans-serif;
+  --font-sans: Geist, sans-serif;
+  --font-spacegrotesk: Space Grotesk
 }
 
 @layer base {
