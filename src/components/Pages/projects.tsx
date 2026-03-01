@@ -5,9 +5,7 @@ import { Button } from "../ui/button"
 import { Card, CardContent } from "../ui/card"
 
 import igrejaDashboard from "@/assets/projects/igreja-dashboard.png"
-import igrejaEventos from "@/assets/projects/igreja-eventos.png"
 import igrejaFinanceiro from "@/assets/projects/igreja-financeiro.png"
-// IMPORTA TEUS PRINTS (ajusta os nomes conforme salvar)
 import igrejaHome from "@/assets/projects/igreja-home.png"
 
 import barbeariaHome from "@/assets/projects/barbearia-home.png"
@@ -58,11 +56,6 @@ export function Projects() {
 					src: igrejaDashboard,
 					alt: "Dashboard administrativo da plataforma da igreja",
 					caption: "Dashboard admin com visão rápida e atalhos de módulos.",
-				},
-				{
-					src: igrejaEventos,
-					alt: "Gestão de eventos da plataforma da igreja",
-					caption: "Criação e gerenciamento de eventos com ações administrativas.",
 				},
 				{
 					src: igrejaFinanceiro,
