@@ -9,6 +9,9 @@ import {
   Linkedin,
   Mail
 } from "lucide-react";
+import bridclub from "./assets/projects/bridclub.jpeg";
+import laundry from "./assets/projects/laundry.jpg";
+import logovideira from "./assets/projects/logovideira.png";
 import { WHATSAPP_LINK } from "./lib/whatsappButton";
 
 export function App() {
@@ -17,7 +20,7 @@ export function App() {
       title: "BridClub",
       category: "Full Stack",
       description: "Sistema de Agendamento para Barbearias.",
-      image: "/src/assets/projects/bridclub.jpeg",
+      image: bridclub,
       size: "large",
       link: "https://bridclub.com/"
     },
@@ -25,14 +28,14 @@ export function App() {
       title: "Plataforma para Igrejas",
       category: "Full Stack",
       description: "Eventos, inscrições, amigo secreto e financeiro em um só lugar.",
-      image: "/src/assets/projects/logovideira.png",
+      image: logovideira,
       size: "small",
     },
     {
       title: "Sistema de Apontamentos para Lavanderias",
       category: "full stack",
       description: "Controle de entradas, status do processo e entregas com histórico e busca.",
-      image: "/src/assets/projects/laundry.jpg",
+      image: laundry,
       size: "small",
     },
     // {
