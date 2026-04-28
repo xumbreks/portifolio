@@ -7,10 +7,6 @@
 
 <br>
 
-<p align="center">
-  <img alt="projeto DevLinks" src=".github/Capa.jpeg" width="100%" target="_blank">
-</p>
-
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -24,6 +20,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O site portifolio
 
-- [Acesse o projeto finalizado, online](https://portifolio-brian.vercel.app)
+- [Acesse o projeto finalizado, online](https://brianrangel.vercel.app)
 
 Feito com ♥ by Brian
