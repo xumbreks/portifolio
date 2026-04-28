@@ -19,7 +19,6 @@
     "embla-carousel-react": "8.0.0-rc22",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.314.0",
-    "nodemailer": "^6.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^3.0.1"

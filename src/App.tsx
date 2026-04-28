@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import {
   Code2,
   Cpu,
+  ExternalLink,
   Github,
   Globe,
   Linkedin,
@@ -17,6 +18,7 @@ import { WHATSAPP_LINK } from "./lib/whatsappButton";
 export function App() {
   const projects = [
     {
+      id: 1,
       title: "BridClub",
       category: "Full Stack",
       description: "Sistema de Agendamento para Barbearias.",
@@ -25,13 +27,16 @@ export function App() {
       link: "https://bridclub.com/"
     },
     {
+      id: 2,
       title: "Plataforma para Igrejas",
       category: "Full Stack",
       description: "Eventos, inscrições, amigo secreto e financeiro em um só lugar.",
       image: logovideira,
       size: "small",
+      link: "https://videiraportimao.pt/"
     },
     {
+      id: 3,
       title: "Sistema de Apontamentos para Lavanderias",
       category: "full stack",
       description: "Controle de entradas, status do processo e entregas com histórico e busca.",
@@ -39,6 +44,7 @@ export function App() {
       size: "small",
     },
     // {
+    //   id: 4,
     //   title: "Dev Social",
     //   category: "React Native",
     //   description: "Rede social para desenvolvedores compartilharem snippets.",
@@ -63,7 +69,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-accent selection:text-black">
+    <div className="min-h-screen bg-bg text-white font-sans selection:bg-accent selection:text-black">
       {/* Atmospheric Glows */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-accent/10 rounded-full blur-[120px]" />
@@ -98,7 +104,7 @@ export function App() {
           className="mb-32"
         >
           <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
-            <div className="h-[1px] w-12 bg-accent" />
+            <div className="h-px w-12 bg-accent" />
             <span className="text-accent text-xs font-bold uppercase tracking-[0.2em]">Desenvolvedor de Software</span>
           </motion.div>
 
@@ -144,7 +150,7 @@ export function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.map((project, idx) => (
               <motion.div
-                key={idx}
+                key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -154,7 +160,7 @@ export function App() {
                   ${project.size === 'medium' ? 'md:col-span-2' : ''}
                 `}
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-4/3 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -162,7 +168,7 @@ export function App() {
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
 
                 <div className="absolute bottom-0 left-0 p-8 w-full">
                   <span className="text-[10px] uppercase tracking-widest text-accent font-bold mb-2 block">
@@ -170,7 +176,11 @@ export function App() {
                   </span>
                   <h3 className="text-2xl font-serif mb-2 flex items-center justify-between">
                     {project.title}
-                    {/* <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" /> */}
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-accent transition-colors">
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
                   </h3>
                   <p className="text-sm text-white/50 line-clamp-2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                     {project.description}

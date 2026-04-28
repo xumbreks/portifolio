@@ -1,3 +1,5 @@
+![Cover](./.github/capa-github.png)
+
 <h1 align="center"> Portfolio </h1>
 
 <p align="center">
